@@ -3,20 +3,27 @@
  # Testing the project locally 
  
 1. Clone this project
+
 git clone https://github.com/DevopsShami/Aws-deploy.git
 
-2. Setup the following environment variables - (.env) file
+3. Setup the following environment variables - (.env) file
 
 DOMAIN= ""
+
 PORT=8080
+
 STATIC_DIR="./client"
+
 PUBLISHABLE_KEY=""
+
 SECRET_KEY=""
 
 Note : We need to create this keys in stripes
 
 3. Initialise and start the project
+   
 npm install
+
 npm run start
 
 # Set up an AWS EC2 instance
@@ -30,6 +37,7 @@ npm run start
  * Instance type - t2.micro
 
 3. Connecting to the instance using ssh
+   
 ssh -i instance.pem ubunutu@<IP_ADDRESS>
 
 # Configuring Ubuntu on remote VM 
@@ -38,22 +46,31 @@ ssh -i instance.pem ubunutu@<IP_ADDRESS>
 sudo apt update
 
 2. Install Git - Guide by DigitalOcean
+   
 3. Configure Node.js and npm - Guide by DigitalOcean
 
 # Deploying the project on AWS
 1. Clone this project in the remote VM
+   
 git clone https://github.com/DevopsShami/Aws-deploy.git
 
-2. Setup the following environment variables - (.env) file
+3. Setup the following environment variables - (.env) file
+
 DOMAIN= ""
+
 PORT=3000
+
 STATIC_DIR="./client"
+
 PUBLISHABLE_KEY=""
+
 SECRET_KEY=""
 For this project, we'll have to set up an Elastic IP Address for our EC2 & that would be our DOMAIN
 
-3. Initialise and start the project
+4. Initialise and start the project
+
 npm install
+
 npm run start
 
 NOTE - We will have to edit the inbound rules in the security group of our EC2, in order to allow traffic from our particular port
