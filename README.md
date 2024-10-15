@@ -28,7 +28,7 @@ Instance type - t2.micro
 
 Connecting to the instance using ssh
 ssh -i instance.pem ubunutu@<IP_ADDRESS>
-Configuring Ubuntu on remote VM
+Configuring Ubuntu on remote VM 
 
 Updating the outdated packages and dependencies
 sudo apt update
